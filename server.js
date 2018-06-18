@@ -9,8 +9,11 @@ const app = express();
 // log the http layer
 app.use(morgan('common'));
 
+app.use(express.static("public")); //what does this line do?
 
-
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/views/index.html");
+});
 
 const blogPostsRouter = require('./blogPostsRouter');
 app.use('/blogposts', blogPostsRouter)
