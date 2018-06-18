@@ -6,9 +6,9 @@ const { BlogPosts } = require('./models');
 
 const jsonParser = bodyParser.json();
 
-BlogPosts.create('Title 1', 'qwerty', 'Max')
-BlogPosts.create('Title 2', 'asdfgh', 'Max')
-BlogPosts.create('Title 3', 'zxcvbn', 'Max')
+BlogPosts.create('Title 1', 'qwerty', 'Max');
+BlogPosts.create('Title 2', 'asdfgh', 'Max');
+BlogPosts.create('Title 3', 'zxcvbn', 'Max');
 
 router.get('/', (req, res) => {
     res.json(BlogPosts.get());
